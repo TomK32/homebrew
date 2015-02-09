@@ -25,8 +25,8 @@ class Homebank < Formula
             "--prefix=#{prefix}"]
     args << "--with-ofx" if build.with? 'libofx'
 
-    system "./configure", *args
-    system "chmod +x ./install-sh"
+      system "./configure", *args
+      chmod("+x", "install-sh")
     system "make install"
   end
 end
